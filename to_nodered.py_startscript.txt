@@ -1,0 +1,14 @@
+[Unit]
+Description=Python Script for Node-RED
+After=network.target
+
+[Service]
+User=z004ymtp
+WorkingDirectory=/home/z004ymtp
+Environment="PATH=/home/z004ymtp/env/bin"
+ExecStart=/home/z004ymtp/env/bin/python3 /home/z004ymtp/to_nodered.py
+
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

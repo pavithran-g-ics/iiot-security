@@ -1,0 +1,15 @@
+[Unit]
+Description=Inotify Logger Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/z004ymtp/file_log_script.sh
+Restart=on-failure
+User=z004ymtp
+WorkingDirectory=/home/z004ymtp/
+Environment=WATCHED_DIR=/home/z004ymtp/Secret
+Environment=LOG_FILE=/home/z004ymtp/Logs/file_logs.txt
+
+[Install]
+WantedBy=multi-user.target
