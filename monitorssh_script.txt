@@ -4,10 +4,11 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/python3 /home/z004ymtp/checking_login.py
+ExecStart=/usr/bin/python3 /home/user/checking_login.py
 User=root
 Restart=always
 Environment=PYTHONUNBUFFERED=1
 
 [Install]
 WantedBy=multi-user.target
+
